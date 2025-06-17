@@ -1,0 +1,8 @@
+<?php
+
+/**
+ * Implement hook_help()
+ */
+function keyword_brandsafe_tagging_help ($route_name, \Drupal\Core\Routing\RouteMatchInterface $routeMatch) {
+  return t('Keyword Brandsafe Tagging helps manage AI-based safety tagging for content.');
+}

@@ -1,0 +1,7 @@
+name: 'Keyword Brandsafe Tagging'
+type: module
+description: 'Analyzes content for brand safety and classifies keywords using AI.'
+core_version_requirement: ^11
+package: Custom
+dependencies:
+  - key:key
