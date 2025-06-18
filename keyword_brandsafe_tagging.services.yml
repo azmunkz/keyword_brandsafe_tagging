@@ -1,4 +1,0 @@
-services:
-  keyword_brandsafe_tagging.ai_content_analyzer:
-    class: Drupal\keyword_brandsafe_tagging\Service\AiContentAnalyzer
-    arguments: ['@key.repository']

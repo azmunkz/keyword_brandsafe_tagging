@@ -1,0 +1,61 @@
+<?php
+
+/**
+ * Implement hook_schema()
+ */
+function keyword_brandsafe_tagging_schema() {
+  $schema['keyword_brandsafe'] = [
+    'description' => 'Stores brand safe keywords and metadata',
+    'fields' => [
+      'id' => [
+        'description' => 'Primary Key',
+        'type' => 'serial',
+        'unsigned' => TRUE,
+        'not null' => TRUE,
+      ],
+      'keyword' => [
+        'description'  => 'The keyword term',
+        'type' => 'varchar',
+        'length' => 255,
+        'not null' => TRUE,
+      ],
+      'language' => [
+        'description' => 'Language of the keyword',
+        'type' => 'varchar',
+        'length' => 32,
+        'not null' => TRUE,
+      ],
+      'severity' => [
+        'description' => 'Severity level: High, Medium, Low',
+        'type' => 'varchar',
+        'length' => 16,
+        'default' => 'Medium'
+      ],
+      'status' => [
+        'description' => 'Active status (1 = active, 0 = inactive)',
+        'type' => 'int',
+        'size' => 'tiny',
+        'not null' => TRUE,
+        'default' => 1
+      ],
+      'created'  => [
+        'description' => 'Created timestamp',
+        'type' => 'int',
+        'not null' => TRUE
+      ],
+      'updated' => [
+        'description' => 'Updated timestamp',
+        'type' => 'int',
+        'not null' => TRUE
+      ],
+    ],
+    'primary key' => ['id'],
+    'indexes' => [
+      'keyword' => ['keyword'],
+      'language' => ['language'],
+      'status' => ['status']
+    ],
+  ];
+
+  return $schema;
+}

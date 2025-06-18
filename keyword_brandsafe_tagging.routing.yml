@@ -1,0 +1,7 @@
+keyword_brandsafe_tagging.keyword_add:
+  path: '/admin/config/brand-safety/keywords/add'
+  defaults:
+    _form: '\Drupal\keyword_brandsafe_tagging\Form\KeywordAddForm'
+    _title: 'Add Brand Safety Keyword'
+  requirements:
+    _permission: 'administer brand safety keywords'
