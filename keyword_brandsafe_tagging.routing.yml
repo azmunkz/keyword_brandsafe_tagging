@@ -1,3 +1,11 @@
+keyword_brandsfae_tagging.keyword_list:
+  path: '/admin/config/brand-safety/keywords'
+  defaults:
+    _controller: '\Drupal\keyword_brandsafe_tagging\Controller\KeywordAdminController::keywordList'
+    _title: 'Keyword List'
+  requirements:
+    _permission: 'administer brand safety keywords'
+
 keyword_brandsafe_tagging.keyword_add:
   path: '/admin/config/brand-safety/keywords/add'
   defaults:

@@ -1,0 +1,6 @@
+keyword_brandsafe_tagging.keyword_list:
+  title: 'Keyowrd List'
+  description: 'View and manage keywords brand safe'
+  parent: system.admin_config
+  route_name: keyword_brandsafe_tagging.keyword_list
+  weight: 0
